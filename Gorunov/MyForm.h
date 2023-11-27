@@ -179,8 +179,8 @@ namespace podolsky {
 		int N = Convert::ToInt32(textBox1->Text);
 		MyClass23 a(N);
 		for (int i; i < N; i++) {
-			listBox1->Items->Add(a)
-		}
+			listBox1->Items->Add(a.getvec(i));
+		};
 	}
 	};
 #pragma endregion

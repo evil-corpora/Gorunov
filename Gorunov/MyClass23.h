@@ -8,7 +8,7 @@ class MyClass23
 {
 private:
 	int size;
-	std::vector<std::string> myVector;
+	std::vector<int> myVector;
 public:
 		MyClass23(int newSize) { // конструктор
 			size = newSize;
@@ -28,7 +28,7 @@ public:
 			}
 			return count;
 		}
-		std::string getvec(int i) {
+		int getvec(int i) {
 			return myVector[i];
 	}
 };
