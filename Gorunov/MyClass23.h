@@ -10,16 +10,16 @@ private:
 	int size;
 	std::vector<int> myVector;
 public:
-		MyClass23(int newSize) { // конструктор
+		MyClass23(int newSize) { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			size = newSize;
 			myVector.resize(size);
-			srand(time(0)); // инициализация генератора случайных чисел
+			srand(time(0)); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 			for (int i = 0; i < size; i++) {
-				myVector[i] = rand() % 101 - 50; // случайные числа из отрезка [-50; 50]
+				myVector[i] = rand() % 101 - 50; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ [-50; 50]
 			}
 		}
 
-		int countPairs() { // метод для подсчета пар соседних равных элементов
+		int countPairs() { // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			int count = 0;
 			for (int i = 0; i < size - 1; i++) {
 				if (myVector[i] == myVector[i + 1]) {
@@ -32,4 +32,24 @@ public:
 			return myVector[i];
 	}
 };
+	/*private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		РќР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ
+		String^ string = safe_cast<String^> (this->TextBox1->Text);
+		int count = 0;
+		String^ gl = "Рђ,РЇ,РЈ,Р®,Рћ,РЃ,Р•,Р­,Р,Р«,Р°,СЏ,Сѓ,СЋ,Рѕ,С‘,Рµ,СЌ,Рё,С‹";
+		for (int f = 0; f < string->Length; f++) {
+			for (int i = 0; i < gl->Length; i++) {
+				if (string[f] == gl[i]) {
+					count++;
+				}
+			}
+		}
+		float kol = count;
+		float del = string->Length;
+		kol = kol / del;
+		kol = kol * 100;
+		string = System::Convert::ToString(kol);
+		this->textBox2->Text = string;
+
+	}*/
 
