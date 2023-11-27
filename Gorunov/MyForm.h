@@ -178,9 +178,11 @@ namespace podolsky {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		int N = Convert::ToInt32(textBox1->Text);
 		MyClass23 a(N);
-		for (int i; i < N; i++) {
-			listBox1->Items->Add(a.getvec(i));
+		//listBox1->Items->Add(Convert::ToString(a.getvec(2);
+		for (int i=0; i < N; i++) {
+			listBox1->Items->Add(Convert::ToString(a.getvec(i)));
 		};
+
 	}
 	};
 #pragma endregion
