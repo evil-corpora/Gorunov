@@ -28,8 +28,8 @@ public:
 			}
 			return count;
 		}
-		int getvec(int i) {
-			return Vector[i];
+		std::string getvec(int i) {
+			return myVector[i];
 	}
 };
 
