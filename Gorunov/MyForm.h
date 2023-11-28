@@ -229,6 +229,7 @@ namespace podolsky {
 
 		}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Третья лаба
 		int N = Convert::ToInt32(textBox1->Text);
 		MyClass23 a(N);
 		for (int i=0; i < N; i++) {
