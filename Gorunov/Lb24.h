@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-int lab24(int rows, int cols, int** arr) {
+int lab24www(int rows, int cols, int* arr[4]) {
     /*const int rows = 3;
     const int cols = 4;
     int arr[rows][cols] = { {1, 2, 3, 4},

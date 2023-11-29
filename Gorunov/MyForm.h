@@ -1,6 +1,7 @@
 #pragma once
 #include "MyClass23.h"
 #include "lab22.h"
+#include "lb24.h"
 
 namespace podolsky {
 
@@ -386,6 +387,14 @@ private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, S
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	//четвёртая лаба
+	const int rows = 3;
+	const int cols = 4;
+	int *arr[4];
+	for (int i = 0; i < rows; ++i)
+		for (int j = 0; j < cols; ++j)
+			arr[i][j] = i + j;
+	lab24www(rows, cols, arr);
 }
 };
 #pragma endregion
