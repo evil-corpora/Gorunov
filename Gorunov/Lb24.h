@@ -1,26 +1,28 @@
 #pragma once
+#include <vector>
+#include <stdlib.h> // для функций srand и rand,
+#include <ctime> // для функции time()
 #include <iostream>
-
-
-int lab24www(int rows, int cols, int* arr[4]) {
-    /*const int rows = 3;
-    const int cols = 4;
-    int arr[rows][cols] = { {1, 2, 3, 4},
-                           {5, 6, 7, 8},
-                           {9, 10, 2, 12} };
-    */
-    int minVal = arr[0][0]; // Начальное значение минимального элемента
-    for (int i = 0; i < rows; i++) {
-        for (int j = 1; j < cols - 1; j++) { // Не рассматриваем крайние столбцы
-            if (arr[i][j] > arr[i][j - 1] && arr[i][j] < arr[i][j + 1]) {
-                // Элемент удовлетворяет условию
-                if (arr[i][j] < minVal) {
-                    // Обновляем значение минимального элемента
-                    minVal = arr[i][j];
-                }
-            }
-        }
-    }
-    return minVal;
-}
-
+class lb24
+{
+public:
+	int nRows, nCols; // nStr строк, nCol столбцов.
+	int** Ar2; // динамический двумерный массив.
+	// Конструктор по умолчанию:
+	lb24(int n = 5, int m = 7)
+	{
+		nRows = n; nCols = m;
+		// Выделение памяти для массива:
+		Ar2 = new int* [nRows];
+		for (int k = 0; k < nRows; k++) Ar2[k] = new int[nCols];
+		// Установка начального случайного числа:
+		srand(time(0));
+		// Инициализация двумерного динамического массива:
+		for (int i = 0; i < nRows; i++)
+			for (int k = 0; k < nCols; k++)
+			{
+				int t = (rand() % 80);
+				Ar2[i][k] = t - 40;
+			}
+	}
+};

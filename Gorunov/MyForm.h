@@ -387,14 +387,27 @@ private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, S
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	//четвЄрта€ лаба
-	const int rows = 3;
-	const int cols = 4;
-	int *arr[4];
-	for (int i = 0; i < rows; ++i)
-		for (int j = 0; j < cols; ++j)
-			arr[i][j] = i + j;
-	lab24www(rows, cols, arr);
+	// button3
+ // »нициализаци€ таблицы
+	int nR = Convert::ToInt32(textBox4->Text),
+		nC = Convert::ToInt32(textBox5->Text);
+	dataGridView1->RowCount = nR; // количество столбцов,
+	dataGridView1->ColumnCount = nC; // количество столбцов,
+	// скрываем:
+	dataGridView1->ColumnHeadersVisible = false; // заголовки столбцов,
+	dataGridView1->RowHeadersVisible = false; // заголовки строк,
+	// устанавливаем ширину столбцов = 30:
+	for (int i = 0; i < dataGridView1->ColumnCount; i++)
+		dataGridView1->Columns[i]->Width = 30;
+	B b(nR, nC); // объ€вление экземпл€ра класса B.
+	// ќтображаем элементы массива в €чейках таблицы:
+	for (int i = 0; i < nR; i++)
+		for (int j = 0; j < nC; j++)
+			dataGridView1->Rows[i]->Cells[j]->Value =
+			b.Ar2[i][j].ToString();
+	button4->Enabled = true; // кнопка Ђрешитьї стала доступна.
+}
+
 }
 };
 #pragma endregion
