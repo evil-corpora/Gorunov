@@ -62,6 +62,10 @@ namespace podolsky {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
+	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
 
 
 	private:
@@ -92,6 +96,8 @@ namespace podolsky {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -100,6 +106,8 @@ namespace podolsky {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -250,6 +258,8 @@ namespace podolsky {
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->Controls->Add(this->button6);
+			this->groupBox3->Controls->Add(this->button5);
 			this->groupBox3->Controls->Add(this->textBox5);
 			this->groupBox3->Controls->Add(this->textBox4);
 			this->groupBox3->Controls->Add(this->label4);
@@ -262,11 +272,33 @@ namespace podolsky {
 			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox3->Name = L"groupBox3";
 			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox3->Size = System::Drawing::Size(252, 141);
+			this->groupBox3->Size = System::Drawing::Size(252, 205);
 			this->groupBox3->TabIndex = 4;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Задача на двумерный массивв";
 			this->groupBox3->Enter += gcnew System::EventHandler(this, &MyForm::groupBox3_Enter);
+			// 
+			// button6
+			// 
+			this->button6->Enabled = false;
+			this->button6->Location = System::Drawing::Point(115, 166);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(65, 23);
+			this->button6->TabIndex = 9;
+			this->button6->Text = L"Чтение";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// button5
+			// 
+			this->button5->Enabled = false;
+			this->button5->Location = System::Drawing::Point(115, 136);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(65, 23);
+			this->button5->TabIndex = 8;
+			this->button5->Text = L"Запись";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// textBox5
 			// 
@@ -357,6 +389,10 @@ namespace podolsky {
 			this->dataGridView1->TabIndex = 0;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick_1);
 			// 
+			// openFileDialog1
+			// 
+			this->openFileDialog1->FileName = L"openFileDialog1";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -434,6 +470,8 @@ namespace podolsky {
 				dataGridView1->Rows[i]->Cells[j]->Value =
 				b.Ar2[i][j].ToString();
 		button4->Enabled = true; // кнопка «решить» стала доступна.int lab24(int rows, int colms)
+		button5->Enabled = true;
+		button6->Enabled = true;
 	}
 		   int lab24(int nR, int nC, lb24 b) {
 			   int minElem = 55555;
@@ -472,8 +510,54 @@ namespace podolsky {
 			label4->Text = "Нет такого числа";
 		}
 	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Запись
+		if (saveFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK) {
+			int R = dataGridView1->RowCount, // кол-во строк в таблице,
+				C = dataGridView1->ColumnCount; // кол-во столбцов в таблице
+			String^ filepath = saveFileDialog1->FileName;
+			System::IO::StreamWriter^ file = gcnew System::IO::StreamWriter(filepath);
+			file->WriteLine(Convert::ToString(R)); // кол-во строк в файл,
+			file->WriteLine(Convert::ToString(C)); // кол-во столбцов в файл
+			for (int i = 0; i < R; i++)
+				for (int j = 0; j < C; j++)
+					file->WriteLine(dataGridView1->Rows[i]->Cells[j]->Value);
+			file->Close();
+		}
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Чтение
+		System::String^ line, ^ lineR, ^ lineC;
+		if (openFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK)
+			// если имя файла выбрано:
+		{// получаем путь к файлу:
+			String^ filepath = openFileDialog1->FileName;
+			// создаём поток для чтения:
+			System::IO::StreamReader^ file = gcnew System::IO::StreamReader(filepath);
+			try
+			{ // пытаемся прочитать строку из файла:
+				lineR = file->ReadLine(); int R = Convert::ToInt32(lineR); // кол-во строк,
+				lineC = file->ReadLine(); int C = Convert::ToInt32(lineC); // кол-во столбцов.
+				if (R != dataGridView1->RowCount || C != dataGridView1->ColumnCount)
+					// размеры таблицы после инициализации и записанные в файле не равны:
+				{
+					line = L"Ошибка: размеры таблицы д.б. " + lineR + L" строк и " + lineC + L" стлб";
+					MessageBox::Show(line); // сообщаем об ошибке,
+					return; // и выходим из обработчика.
+				}
+				// читаем известное кол-во строк из файла в элементы таблицы:
+				for (int i = 0; i < R; i++)
+					for (int j = 0; j < C; j++)
+						dataGridView1->Rows[i]->Cells[j]->Value = file->ReadLine();
+			}
+			catch (System::IO::IOException^ e) // обработка исключения,
+			{
+				MessageBox::Show(e->Message);
+			}
+			file->Close();
+		}
+	}
 	};
-
 #pragma endregion
 }
 
