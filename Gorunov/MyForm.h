@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "MyClass23.h"
 #include "lab22.h"
 #include "lb24.h"
@@ -13,7 +13,7 @@ namespace podolsky {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -22,13 +22,13 @@ namespace podolsky {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm()
 		{
@@ -39,8 +39,8 @@ namespace podolsky {
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
-	private: System::Windows::Forms::ToolStripMenuItem^ лБ22ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ лБ23ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Р»Р‘22ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Р»Р‘23ToolStripMenuItem;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::TextBox^ textBox1;
@@ -51,7 +51,7 @@ namespace podolsky {
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::ToolStripMenuItem^ лБ24ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Р»Р‘24ToolStripMenuItem;
 
 	private: System::Windows::Forms::GroupBox^ groupBox3;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
@@ -66,25 +66,41 @@ namespace podolsky {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
 	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
+	private: System::Windows::Forms::GroupBox^ groupBox4;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart2;
+	private: System::Windows::Forms::Timer^ timer1;
+	private: System::ComponentModel::IContainer^ components;
 
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->лБ22ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->лБ23ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->лБ24ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Р»Р‘22ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Р»Р‘23ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Р»Р‘24ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -108,19 +124,30 @@ namespace podolsky {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
+			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->groupBox4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->лБ22ToolStripMenuItem,
-					this->лБ23ToolStripMenuItem, this->лБ24ToolStripMenuItem
+				this->Р»Р‘22ToolStripMenuItem,
+					this->Р»Р‘23ToolStripMenuItem, this->Р»Р‘24ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -129,23 +156,23 @@ namespace podolsky {
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// лБ22ToolStripMenuItem
+			// Р»Р‘22ToolStripMenuItem
 			// 
-			this->лБ22ToolStripMenuItem->Name = L"лБ22ToolStripMenuItem";
-			this->лБ22ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
-			this->лБ22ToolStripMenuItem->Text = L"ЛБ 2.2";
+			this->Р»Р‘22ToolStripMenuItem->Name = L"Р»Р‘22ToolStripMenuItem";
+			this->Р»Р‘22ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->Р»Р‘22ToolStripMenuItem->Text = L"Р›Р‘ 2.2";
 			// 
-			// лБ23ToolStripMenuItem
+			// Р»Р‘23ToolStripMenuItem
 			// 
-			this->лБ23ToolStripMenuItem->Name = L"лБ23ToolStripMenuItem";
-			this->лБ23ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
-			this->лБ23ToolStripMenuItem->Text = L"ЛБ 2.3";
+			this->Р»Р‘23ToolStripMenuItem->Name = L"Р»Р‘23ToolStripMenuItem";
+			this->Р»Р‘23ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->Р»Р‘23ToolStripMenuItem->Text = L"Р›Р‘ 2.3";
 			// 
-			// лБ24ToolStripMenuItem
+			// Р»Р‘24ToolStripMenuItem
 			// 
-			this->лБ24ToolStripMenuItem->Name = L"лБ24ToolStripMenuItem";
-			this->лБ24ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
-			this->лБ24ToolStripMenuItem->Text = L"ЛБ 2.4";
+			this->Р»Р‘24ToolStripMenuItem->Name = L"Р»Р‘24ToolStripMenuItem";
+			this->Р»Р‘24ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->Р»Р‘24ToolStripMenuItem->Text = L"Р›Р‘ 2.4";
 			// 
 			// groupBox1
 			// 
@@ -161,7 +188,7 @@ namespace podolsky {
 			this->groupBox1->Size = System::Drawing::Size(227, 142);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Задача на массив";
+			this->groupBox1->Text = L"Р—Р°РґР°С‡Р° РЅР° РјР°СЃСЃРёРІ";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
 			// 
 			// button1
@@ -171,7 +198,7 @@ namespace podolsky {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(73, 23);
 			this->button1->TabIndex = 2;
-			this->button1->Text = L"Вычислить";
+			this->button1->Text = L"Р’С‹С‡РёСЃР»РёС‚СЊ";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -225,7 +252,7 @@ namespace podolsky {
 			this->groupBox2->Size = System::Drawing::Size(203, 141);
 			this->groupBox2->TabIndex = 2;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Преобразование строки";
+			this->groupBox2->Text = L"РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё";
 			// 
 			// button2
 			// 
@@ -234,7 +261,7 @@ namespace podolsky {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 22);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"заменить";
+			this->button2->Text = L"Р·Р°РјРµРЅРёС‚СЊ";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -254,7 +281,7 @@ namespace podolsky {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(183, 20);
 			this->textBox2->TabIndex = 0;
-			this->textBox2->Text = L"AsEпОрОк";
+			this->textBox2->Text = L"AsEРїРћСЂРћРє";
 			// 
 			// groupBox3
 			// 
@@ -275,7 +302,7 @@ namespace podolsky {
 			this->groupBox3->Size = System::Drawing::Size(252, 205);
 			this->groupBox3->TabIndex = 4;
 			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Задача на двумерный массивв";
+			this->groupBox3->Text = L"Р—Р°РґР°С‡Р° РЅР° РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІРІ";
 			this->groupBox3->Enter += gcnew System::EventHandler(this, &MyForm::groupBox3_Enter);
 			// 
 			// button6
@@ -285,7 +312,7 @@ namespace podolsky {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(65, 23);
 			this->button6->TabIndex = 9;
-			this->button6->Text = L"Чтение";
+			this->button6->Text = L"Р§С‚РµРЅРёРµ";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
@@ -296,7 +323,7 @@ namespace podolsky {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(65, 23);
 			this->button5->TabIndex = 8;
-			this->button5->Text = L"Запись";
+			this->button5->Text = L"Р—Р°РїРёСЃСЊ";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
@@ -328,7 +355,7 @@ namespace podolsky {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(37, 13);
 			this->label4->TabIndex = 5;
-			this->label4->Text = L"Ответ";
+			this->label4->Text = L"РћС‚РІРµС‚";
 			this->label4->UseWaitCursor = true;
 			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
@@ -340,7 +367,7 @@ namespace podolsky {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(65, 23);
 			this->button4->TabIndex = 4;
-			this->button4->Text = L"Решить";
+			this->button4->Text = L"Р РµС€РёС‚СЊ";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
@@ -351,7 +378,7 @@ namespace podolsky {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(65, 25);
 			this->button3->TabIndex = 3;
-			this->button3->Text = L"инициал";
+			this->button3->Text = L"РёРЅРёС†РёР°Р»";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
@@ -393,11 +420,98 @@ namespace podolsky {
 			// 
 			this->openFileDialog1->FileName = L"openFileDialog1";
 			// 
+			// groupBox4
+			// 
+			this->groupBox4->Controls->Add(this->textBox8);
+			this->groupBox4->Controls->Add(this->button7);
+			this->groupBox4->Controls->Add(this->textBox7);
+			this->groupBox4->Controls->Add(this->textBox6);
+			this->groupBox4->Controls->Add(this->chart2);
+			this->groupBox4->Controls->Add(this->chart1);
+			this->groupBox4->Location = System::Drawing::Point(14, 240);
+			this->groupBox4->Name = L"groupBox4";
+			this->groupBox4->Size = System::Drawing::Size(740, 284);
+			this->groupBox4->TabIndex = 5;
+			this->groupBox4->TabStop = false;
+			this->groupBox4->Text = L"РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ";
+			this->groupBox4->Enter += gcnew System::EventHandler(this, &MyForm::groupBox4_Enter);
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(364, 258);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(100, 20);
+			this->textBox8->TabIndex = 5;
+			this->textBox8->Text = L"2";
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(244, 256);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->TabIndex = 4;
+			this->button7->Text = L"РџРѕСЃС‚СЂРѕРёС‚СЊ";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(122, 258);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(100, 20);
+			this->textBox7->TabIndex = 3;
+			this->textBox7->Text = L"10";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(7, 258);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->TabIndex = 2;
+			this->textBox6->Text = L"0";
+			// 
+			// chart2
+			// 
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
+			this->chart2->Location = System::Drawing::Point(364, 19);
+			this->chart2->Name = L"chart2";
+			series3->ChartArea = L"ChartArea1";
+			series3->Legend = L"Legend1";
+			series3->Name = L" = 2a(1в€’cosпЃЄ)";
+			this->chart2->Series->Add(series3);
+			this->chart2->Size = System::Drawing::Size(370, 228);
+			this->chart2->TabIndex = 1;
+			this->chart2->Text = L"chart2";
+			// 
+			// chart1
+			// 
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
+			this->chart1->Location = System::Drawing::Point(6, 19);
+			this->chart1->Name = L"chart1";
+			series4->ChartArea = L"ChartArea1";
+			series4->Legend = L"Legend1";
+			series4->Name = L"y = sin(ln x)";
+			this->chart1->Series->Add(series4);
+			this->chart1->Size = System::Drawing::Size(342, 228);
+			this->chart1->TabIndex = 0;
+			this->chart1->Text = L"chart1";
+			// 
+			// timer1
+			// 
+			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(861, 314);
+			this->ClientSize = System::Drawing::Size(861, 584);
+			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
@@ -405,7 +519,7 @@ namespace podolsky {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
-			this->Text = L"ООЯиСП – Курсовой проект- гр. 22ВГ1 – Подольский Ян Павлович";
+			this->Text = L"РћРћРЇРёРЎРџ вЂ“ РљСѓСЂСЃРѕРІРѕР№ РїСЂРѕРµРєС‚- РіСЂ. 22Р’Р“1 вЂ“ РџРѕРґРѕР»СЊСЃРєРёР№ РЇРЅ РџР°РІР»РѕРІРёС‡";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -416,16 +530,20 @@ namespace podolsky {
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->groupBox4->ResumeLayout(false);
+			this->groupBox4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Третья лаба
+		//РўСЂРµС‚СЊСЏ Р»Р°Р±Р°
 		int N = Convert::ToInt32(textBox1->Text);
 		MyClass23 a(N);
 		for (int i = 0; i < N; i++) {
-			//Если не будет работать вставить Convert::ToString
+			//Р•СЃР»Рё РЅРµ Р±СѓРґРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РІСЃС‚Р°РІРёС‚СЊ Convert::ToString
 			listBox1->Items->Add((a.getvec(i)));
 		};
 		listBox2->Items->Add(Convert::ToString(a.countPairs()));
@@ -435,7 +553,7 @@ namespace podolsky {
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		//нажатие на вторую кнопку (вторая лаба)
+		//РЅР°Р¶Р°С‚РёРµ РЅР° РІС‚РѕСЂСѓСЋ РєРЅРѕРїРєСѓ (РІС‚РѕСЂР°СЏ Р»Р°Р±Р°)
 		String^ string = safe_cast<String^> (this->textBox2->Text);
 		std::string str2 = msclr::interop::marshal_as<std::string>(string);
 		this->textBox3->Text = Convert::ToString(kol(str2));
@@ -452,31 +570,31 @@ namespace podolsky {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		// button3
-		// Инициализация таблицы
+		// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С‚Р°Р±Р»РёС†С‹
 		int nR = Convert::ToInt32(textBox4->Text),
 			nC = Convert::ToInt32(textBox5->Text);
-		dataGridView1->RowCount = nR; // количество столбцов,
-		dataGridView1->ColumnCount = nC; // количество столбцов,
-		// скрываем:
-		dataGridView1->ColumnHeadersVisible = false; // заголовки столбцов,
-		dataGridView1->RowHeadersVisible = false; // заголовки строк,
-		// устанавливаем ширину столбцов = 30:
+		dataGridView1->RowCount = nR; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ,
+		dataGridView1->ColumnCount = nC; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ,
+		// СЃРєСЂС‹РІР°РµРј:
+		dataGridView1->ColumnHeadersVisible = false; // Р·Р°РіРѕР»РѕРІРєРё СЃС‚РѕР»Р±С†РѕРІ,
+		dataGridView1->RowHeadersVisible = false; // Р·Р°РіРѕР»РѕРІРєРё СЃС‚СЂРѕРє,
+		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С€РёСЂРёРЅСѓ СЃС‚РѕР»Р±С†РѕРІ = 30:
 		for (int i = 0; i < dataGridView1->ColumnCount; i++)
 			dataGridView1->Columns[i]->Width = 30;
-		lb24 b(nR, nC); // объявление экземпляра класса B.
-		// Отображаем элементы массива в ячейках таблицы:
+		lb24 b(nR, nC); // РѕР±СЉСЏРІР»РµРЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° B.
+		// РћС‚РѕР±СЂР°Р¶Р°РµРј СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР° РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹:
 		for (int i = 0; i < nR; i++)
 			for (int j = 0; j < nC; j++)
 				dataGridView1->Rows[i]->Cells[j]->Value =
 				b.Ar2[i][j].ToString();
-		button4->Enabled = true; // кнопка «решить» стала доступна.int lab24(int rows, int colms)
+		button4->Enabled = true; // РєРЅРѕРїРєР° В«СЂРµС€РёС‚СЊВ» СЃС‚Р°Р»Р° РґРѕСЃС‚СѓРїРЅР°.int lab24(int rows, int colms)
 		button5->Enabled = true;
 		button6->Enabled = true;
 	}
 		   int lab24(int nR, int nC, lb24 b) {
 			   int minElem = 55555;
 			   for (int i = 0; i < nR; i++) {
-				   int curMin = 55555; // Переменная для хранения наименьшего элемента в текущей строке
+				   int curMin = 55555; // РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РЅР°РёРјРµРЅСЊС€РµРіРѕ СЌР»РµРјРµРЅС‚Р° РІ С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРµ
 				   for (int j = 1; j < nC - 1; j++) {
 					   if (b.Ar2[i][j] > b.Ar2[i][j - 1] && b.Ar2[i][j] < b.Ar2[i][j + 1]) {
 						   if (b.Ar2[i][j] < curMin) {
@@ -491,15 +609,15 @@ namespace podolsky {
 			   return minElem;
 		   }
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		//писать сюда 24
-		int nRows = dataGridView1->RowCount, // количество строк
-			nCols = dataGridView1->ColumnCount; // количество столбцов
+		//РїРёСЃР°С‚СЊ СЃСЋРґР° 24
+		int nRows = dataGridView1->RowCount, // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє
+			nCols = dataGridView1->ColumnCount; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ
 		lb24 a(nRows, nCols);
 		for (int i = 0; i < nRows; i++)
 		{
 			for (int j = 0; j < nCols; j++)
 			{
-				// преобразование значения типа указатель на System::String в целое:
+				// РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёСЏ С‚РёРїР° СѓРєР°Р·Р°С‚РµР»СЊ РЅР° System::String РІ С†РµР»РѕРµ:
 				a.Ar2[i][j] = Convert::ToInt32(dataGridView1->Rows[i]->Cells[j]->Value);
 			}
 		}
@@ -507,18 +625,18 @@ namespace podolsky {
 			label4->Text = lab24(nRows, nCols, a).ToString();
 		}
 		else {
-			label4->Text = "Нет такого числа";
+			label4->Text = "РќРµС‚ С‚Р°РєРѕРіРѕ С‡РёСЃР»Р°";
 		}
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Запись
+		//Р—Р°РїРёСЃСЊ
 		if (saveFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK) {
-			int R = dataGridView1->RowCount, // кол-во строк в таблице,
-				C = dataGridView1->ColumnCount; // кол-во столбцов в таблице
+			int R = dataGridView1->RowCount, // РєРѕР»-РІРѕ СЃС‚СЂРѕРє РІ С‚Р°Р±Р»РёС†Рµ,
+				C = dataGridView1->ColumnCount; // РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ РІ С‚Р°Р±Р»РёС†Рµ
 			String^ filepath = saveFileDialog1->FileName;
 			System::IO::StreamWriter^ file = gcnew System::IO::StreamWriter(filepath);
-			file->WriteLine(Convert::ToString(R)); // кол-во строк в файл,
-			file->WriteLine(Convert::ToString(C)); // кол-во столбцов в файл
+			file->WriteLine(Convert::ToString(R)); // РєРѕР»-РІРѕ СЃС‚СЂРѕРє РІ С„Р°Р№Р»,
+			file->WriteLine(Convert::ToString(C)); // РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ РІ С„Р°Р№Р»
 			for (int i = 0; i < R; i++)
 				for (int j = 0; j < C; j++)
 					file->WriteLine(dataGridView1->Rows[i]->Cells[j]->Value);
@@ -526,36 +644,59 @@ namespace podolsky {
 		}
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Чтение
+		//Р§С‚РµРЅРёРµ
 		System::String^ line, ^ lineR, ^ lineC;
 		if (openFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK)
-			// если имя файла выбрано:
-		{// получаем путь к файлу:
+			// РµСЃР»Рё РёРјСЏ С„Р°Р№Р»Р° РІС‹Р±СЂР°РЅРѕ:
+		{// РїРѕР»СѓС‡Р°РµРј РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ:
 			String^ filepath = openFileDialog1->FileName;
-			// создаём поток для чтения:
+			// СЃРѕР·РґР°С‘Рј РїРѕС‚РѕРє РґР»СЏ С‡С‚РµРЅРёСЏ:
 			System::IO::StreamReader^ file = gcnew System::IO::StreamReader(filepath);
 			try
-			{ // пытаемся прочитать строку из файла:
-				lineR = file->ReadLine(); int R = Convert::ToInt32(lineR); // кол-во строк,
-				lineC = file->ReadLine(); int C = Convert::ToInt32(lineC); // кол-во столбцов.
+			{ // РїС‹С‚Р°РµРјСЃСЏ РїСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚СЂРѕРєСѓ РёР· С„Р°Р№Р»Р°:
+				lineR = file->ReadLine(); int R = Convert::ToInt32(lineR); // РєРѕР»-РІРѕ СЃС‚СЂРѕРє,
+				lineC = file->ReadLine(); int C = Convert::ToInt32(lineC); // РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ.
 				if (R != dataGridView1->RowCount || C != dataGridView1->ColumnCount)
-					// размеры таблицы после инициализации и записанные в файле не равны:
+					// СЂР°Р·РјРµСЂС‹ С‚Р°Р±Р»РёС†С‹ РїРѕСЃР»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё Рё Р·Р°РїРёСЃР°РЅРЅС‹Рµ РІ С„Р°Р№Р»Рµ РЅРµ СЂР°РІРЅС‹:
 				{
-					line = L"Ошибка: размеры таблицы д.б. " + lineR + L" строк и " + lineC + L" стлб";
-					MessageBox::Show(line); // сообщаем об ошибке,
-					return; // и выходим из обработчика.
+					line = L"РћС€РёР±РєР°: СЂР°Р·РјРµСЂС‹ С‚Р°Р±Р»РёС†С‹ Рґ.Р±. " + lineR + L" СЃС‚СЂРѕРє Рё " + lineC + L" СЃС‚Р»Р±";
+					MessageBox::Show(line); // СЃРѕРѕР±С‰Р°РµРј РѕР± РѕС€РёР±РєРµ,
+					return; // Рё РІС‹С…РѕРґРёРј РёР· РѕР±СЂР°Р±РѕС‚С‡РёРєР°.
 				}
-				// читаем известное кол-во строк из файла в элементы таблицы:
+				// С‡РёС‚Р°РµРј РёР·РІРµСЃС‚РЅРѕРµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє РёР· С„Р°Р№Р»Р° РІ СЌР»РµРјРµРЅС‚С‹ С‚Р°Р±Р»РёС†С‹:
 				for (int i = 0; i < R; i++)
 					for (int j = 0; j < C; j++)
 						dataGridView1->Rows[i]->Cells[j]->Value = file->ReadLine();
 			}
-			catch (System::IO::IOException^ e) // обработка исключения,
+			catch (System::IO::IOException^ e) // РѕР±СЂР°Р±РѕС‚РєР° РёСЃРєР»СЋС‡РµРЅРёСЏ,
 			{
 				MessageBox::Show(e->Message);
 			}
 			file->Close();
 		}
+	}
+	private: System::Void groupBox4_Enter(System::Object^ sender, System::EventArgs^ e) {
+	}
+		   double x, a;
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+		//РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєР°
+		chart1->Series[0]->Points->Clear(); // РѕС‡РёСЃС‚РєР° РґРёР°РіСЂР°РјРјС‹,
+		chart2->Series[0]->Points->Clear();
+		x = x.Parse(textBox6->Text); // x = A.
+		a = a.Parse(textBox7->Text);
+		timer1->Enabled = true;
+	}
+	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+		if (x <= x.Parse(textBox8->Text)) {// РџСЂРё РїРѕСЃС‚СЂРѕРµРЅРёРё С‚РѕС‡РµРє Р°СЂРіСѓРјРµРЅС‚С‹ РѕРєСЂСѓРіР»СЏРµРј РґРѕ 3 Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№.
+			// СЃС‚СЂРѕРёРј С‚РѕС‡РєСѓ (x, f1(x)):
+			chart1->Series[0]->Points->AddXY(Math::Round(x, 3), sin(log(x)));
+			// СЃС‚СЂРѕРёРј С‚РѕС‡РєСѓ (x, f2(x)):
+			double angle = (10 * Math::Round(x, 3) * Math::PI) / 180.0;
+			chart2->Series[0]->Points->AddXY(10 * x, 2 * a * (1 - cos(angle)));
+			x += 0.1; // СѓРІРµР»РёС‡РёР»Рё Р°СЂРіСѓРјРµРЅС‚.
+		}
+		else // x > B,
+			timer1->Enabled = false; // РІС‹РєР»СЋС‡РёР»Рё С‚Р°Р№РјРµСЂ
 	}
 	};
 #pragma endregion
