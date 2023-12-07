@@ -91,12 +91,12 @@ namespace podolsky {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->лБ22ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->лБ23ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -144,6 +144,7 @@ namespace podolsky {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->лБ22ToolStripMenuItem,
@@ -151,27 +152,27 @@ namespace podolsky {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 1, 0, 1);
-			this->menuStrip1->Size = System::Drawing::Size(861, 24);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(6, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(1292, 33);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// лБ22ToolStripMenuItem
 			// 
 			this->лБ22ToolStripMenuItem->Name = L"лБ22ToolStripMenuItem";
-			this->лБ22ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->лБ22ToolStripMenuItem->Size = System::Drawing::Size(79, 29);
 			this->лБ22ToolStripMenuItem->Text = L"ЛБ 2.2";
 			// 
 			// лБ23ToolStripMenuItem
 			// 
 			this->лБ23ToolStripMenuItem->Name = L"лБ23ToolStripMenuItem";
-			this->лБ23ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->лБ23ToolStripMenuItem->Size = System::Drawing::Size(79, 29);
 			this->лБ23ToolStripMenuItem->Text = L"ЛБ 2.3";
 			// 
 			// лБ24ToolStripMenuItem
 			// 
 			this->лБ24ToolStripMenuItem->Name = L"лБ24ToolStripMenuItem";
-			this->лБ24ToolStripMenuItem->Size = System::Drawing::Size(52, 22);
+			this->лБ24ToolStripMenuItem->Size = System::Drawing::Size(79, 29);
 			this->лБ24ToolStripMenuItem->Text = L"ЛБ 2.4";
 			// 
 			// groupBox1
@@ -181,11 +182,9 @@ namespace podolsky {
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Controls->Add(this->listBox2);
 			this->groupBox1->Controls->Add(this->listBox1);
-			this->groupBox1->Location = System::Drawing::Point(243, 23);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox1->Location = System::Drawing::Point(364, 35);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox1->Size = System::Drawing::Size(227, 142);
+			this->groupBox1->Size = System::Drawing::Size(340, 218);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Задача на массив";
@@ -193,10 +192,9 @@ namespace podolsky {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(135, 86);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Location = System::Drawing::Point(202, 132);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(73, 23);
+			this->button1->Size = System::Drawing::Size(110, 35);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Вычислить";
 			this->button1->UseVisualStyleBackColor = true;
@@ -204,20 +202,18 @@ namespace podolsky {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(51, 86);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Location = System::Drawing::Point(76, 132);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(68, 20);
+			this->textBox1->Size = System::Drawing::Size(100, 26);
 			this->textBox1->TabIndex = 2;
 			this->textBox1->Text = L"10";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(28, 88);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(42, 135);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(21, 13);
+			this->label1->Size = System::Drawing::Size(29, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"N=";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
@@ -225,19 +221,19 @@ namespace podolsky {
 			// listBox2
 			// 
 			this->listBox2->FormattingEnabled = true;
-			this->listBox2->Location = System::Drawing::Point(135, 20);
-			this->listBox2->Margin = System::Windows::Forms::Padding(2);
+			this->listBox2->ItemHeight = 20;
+			this->listBox2->Location = System::Drawing::Point(202, 31);
 			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(81, 56);
+			this->listBox2->Size = System::Drawing::Size(120, 84);
 			this->listBox2->TabIndex = 2;
 			// 
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(9, 20);
-			this->listBox1->Margin = System::Windows::Forms::Padding(2);
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(14, 31);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(81, 56);
+			this->listBox1->Size = System::Drawing::Size(120, 84);
 			this->listBox1->TabIndex = 0;
 			// 
 			// groupBox2
@@ -245,21 +241,18 @@ namespace podolsky {
 			this->groupBox2->Controls->Add(this->button2);
 			this->groupBox2->Controls->Add(this->textBox3);
 			this->groupBox2->Controls->Add(this->textBox2);
-			this->groupBox2->Location = System::Drawing::Point(9, 24);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox2->Location = System::Drawing::Point(14, 37);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox2->Size = System::Drawing::Size(203, 141);
+			this->groupBox2->Size = System::Drawing::Size(304, 217);
 			this->groupBox2->TabIndex = 2;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Преобразование строки";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(64, 99);
-			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Location = System::Drawing::Point(96, 152);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 22);
+			this->button2->Size = System::Drawing::Size(112, 34);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"заменить";
 			this->button2->UseVisualStyleBackColor = true;
@@ -267,19 +260,17 @@ namespace podolsky {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(4, 69);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2);
+			this->textBox3->Location = System::Drawing::Point(6, 106);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(183, 20);
+			this->textBox3->Size = System::Drawing::Size(272, 26);
 			this->textBox3->TabIndex = 1;
 			this->textBox3->Text = L" ";
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(5, 31);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Location = System::Drawing::Point(8, 48);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(183, 20);
+			this->textBox2->Size = System::Drawing::Size(272, 26);
 			this->textBox2->TabIndex = 0;
 			this->textBox2->Text = L"AsEпОрОк";
 			// 
@@ -295,11 +286,9 @@ namespace podolsky {
 			this->groupBox3->Controls->Add(this->label3);
 			this->groupBox3->Controls->Add(this->label2);
 			this->groupBox3->Controls->Add(this->dataGridView1);
-			this->groupBox3->Location = System::Drawing::Point(502, 24);
-			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox3->Location = System::Drawing::Point(753, 37);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox3->Size = System::Drawing::Size(252, 205);
+			this->groupBox3->Size = System::Drawing::Size(378, 315);
 			this->groupBox3->TabIndex = 4;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Задача на двумерный массивв";
@@ -308,9 +297,10 @@ namespace podolsky {
 			// button6
 			// 
 			this->button6->Enabled = false;
-			this->button6->Location = System::Drawing::Point(115, 166);
+			this->button6->Location = System::Drawing::Point(172, 255);
+			this->button6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(65, 23);
+			this->button6->Size = System::Drawing::Size(98, 35);
 			this->button6->TabIndex = 9;
 			this->button6->Text = L"Чтение";
 			this->button6->UseVisualStyleBackColor = true;
@@ -319,9 +309,10 @@ namespace podolsky {
 			// button5
 			// 
 			this->button5->Enabled = false;
-			this->button5->Location = System::Drawing::Point(115, 136);
+			this->button5->Location = System::Drawing::Point(172, 209);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(65, 23);
+			this->button5->Size = System::Drawing::Size(98, 35);
 			this->button5->TabIndex = 8;
 			this->button5->Text = L"Запись";
 			this->button5->UseVisualStyleBackColor = true;
@@ -329,20 +320,18 @@ namespace podolsky {
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(139, 46);
-			this->textBox5->Margin = System::Windows::Forms::Padding(2);
+			this->textBox5->Location = System::Drawing::Point(208, 71);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(68, 20);
+			this->textBox5->Size = System::Drawing::Size(100, 26);
 			this->textBox5->TabIndex = 7;
 			this->textBox5->Text = L"3";
 			this->textBox5->UseWaitCursor = true;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(139, 25);
-			this->textBox4->Margin = System::Windows::Forms::Padding(2);
+			this->textBox4->Location = System::Drawing::Point(208, 38);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(68, 20);
+			this->textBox4->Size = System::Drawing::Size(100, 26);
 			this->textBox4->TabIndex = 6;
 			this->textBox4->Text = L"5";
 			this->textBox4->UseWaitCursor = true;
@@ -350,10 +339,9 @@ namespace podolsky {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(115, 119);
-			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Location = System::Drawing::Point(172, 183);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(37, 13);
+			this->label4->Size = System::Drawing::Size(57, 20);
 			this->label4->TabIndex = 5;
 			this->label4->Text = L"Ответ";
 			this->label4->UseWaitCursor = true;
@@ -362,10 +350,9 @@ namespace podolsky {
 			// button4
 			// 
 			this->button4->Enabled = false;
-			this->button4->Location = System::Drawing::Point(115, 94);
-			this->button4->Margin = System::Windows::Forms::Padding(2);
+			this->button4->Location = System::Drawing::Point(172, 145);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(65, 23);
+			this->button4->Size = System::Drawing::Size(98, 35);
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"Решить";
 			this->button4->UseVisualStyleBackColor = true;
@@ -373,10 +360,9 @@ namespace podolsky {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(115, 67);
-			this->button3->Margin = System::Windows::Forms::Padding(2);
+			this->button3->Location = System::Drawing::Point(172, 103);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(65, 25);
+			this->button3->Size = System::Drawing::Size(98, 38);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"инициал";
 			this->button3->UseVisualStyleBackColor = true;
@@ -385,10 +371,9 @@ namespace podolsky {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(115, 46);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(172, 71);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(20, 13);
+			this->label3->Size = System::Drawing::Size(29, 20);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"C=";
 			this->label3->UseWaitCursor = true;
@@ -396,10 +381,9 @@ namespace podolsky {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(115, 31);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(172, 48);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(21, 13);
+			this->label2->Size = System::Drawing::Size(30, 20);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"R=";
 			this->label2->UseWaitCursor = true;
@@ -407,12 +391,11 @@ namespace podolsky {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(4, 19);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridView1->Location = System::Drawing::Point(6, 29);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
-			this->dataGridView1->Size = System::Drawing::Size(107, 98);
+			this->dataGridView1->Size = System::Drawing::Size(160, 151);
 			this->dataGridView1->TabIndex = 0;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick_1);
 			// 
@@ -428,9 +411,11 @@ namespace podolsky {
 			this->groupBox4->Controls->Add(this->textBox6);
 			this->groupBox4->Controls->Add(this->chart2);
 			this->groupBox4->Controls->Add(this->chart1);
-			this->groupBox4->Location = System::Drawing::Point(14, 240);
+			this->groupBox4->Location = System::Drawing::Point(21, 369);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(740, 284);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->groupBox4->Size = System::Drawing::Size(1110, 437);
 			this->groupBox4->TabIndex = 5;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Построение графиков";
@@ -438,17 +423,19 @@ namespace podolsky {
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(364, 258);
+			this->textBox8->Location = System::Drawing::Point(546, 397);
+			this->textBox8->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(100, 20);
+			this->textBox8->Size = System::Drawing::Size(148, 26);
 			this->textBox8->TabIndex = 5;
 			this->textBox8->Text = L"2";
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(244, 256);
+			this->button7->Location = System::Drawing::Point(366, 394);
+			this->button7->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->Size = System::Drawing::Size(112, 35);
 			this->button7->TabIndex = 4;
 			this->button7->Text = L"Построить";
 			this->button7->UseVisualStyleBackColor = true;
@@ -456,49 +443,55 @@ namespace podolsky {
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(122, 258);
+			this->textBox7->Location = System::Drawing::Point(183, 397);
+			this->textBox7->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(100, 20);
+			this->textBox7->Size = System::Drawing::Size(148, 26);
 			this->textBox7->TabIndex = 3;
 			this->textBox7->Text = L"10";
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(7, 258);
+			this->textBox6->Location = System::Drawing::Point(10, 397);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->Size = System::Drawing::Size(148, 26);
 			this->textBox6->TabIndex = 2;
 			this->textBox6->Text = L"0";
 			// 
 			// chart2
 			// 
-			chartArea3->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea3);
-			legend3->Name = L"Legend1";
-			this->chart2->Legends->Add(legend3);
-			this->chart2->Location = System::Drawing::Point(364, 19);
+			chartArea1->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->chart2->Legends->Add(legend1);
+			this->chart2->Location = System::Drawing::Point(546, 29);
+			this->chart2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chart2->Name = L"chart2";
-			series3->ChartArea = L"ChartArea1";
-			series3->Legend = L"Legend1";
-			series3->Name = L" = 2a(1−cos)";
-			this->chart2->Series->Add(series3);
-			this->chart2->Size = System::Drawing::Size(370, 228);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Polar;
+			series1->Legend = L"Legend1";
+			series1->Name = L" = 2a(1−cos)";
+			this->chart2->Series->Add(series1);
+			this->chart2->Size = System::Drawing::Size(555, 351);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart1
 			// 
-			chartArea4->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea4);
-			legend4->Name = L"Legend1";
-			this->chart1->Legends->Add(legend4);
-			this->chart1->Location = System::Drawing::Point(6, 19);
+			chartArea2->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			this->chart1->Legends->Add(legend2);
+			this->chart1->Location = System::Drawing::Point(9, 29);
+			this->chart1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chart1->Name = L"chart1";
-			series4->ChartArea = L"ChartArea1";
-			series4->Legend = L"Legend1";
-			series4->Name = L"y = sin(ln x)";
-			this->chart1->Series->Add(series4);
-			this->chart1->Size = System::Drawing::Size(342, 228);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"y = sin(ln x)";
+			this->chart1->Series->Add(series2);
+			this->chart1->Size = System::Drawing::Size(513, 351);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
 			// 
@@ -508,16 +501,15 @@ namespace podolsky {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(861, 584);
+			this->ClientSize = System::Drawing::Size(1292, 898);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"ООЯиСП – Курсовой проект- гр. 22ВГ1 – Подольский Ян Павлович";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
