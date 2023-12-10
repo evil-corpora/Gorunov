@@ -74,6 +74,16 @@ namespace podolsky {
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart2;
 	private: System::Windows::Forms::Timer^ timer1;
+	private: System::Windows::Forms::ToolStripMenuItem^ лБ25ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ лToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ лБ27ToolStripMenuItem;
+	private: System::Windows::Forms::GroupBox^ groupBox5;
+	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button8;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Timer^ timer2;
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -101,6 +111,9 @@ namespace podolsky {
 			this->лБ22ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->лБ23ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->лБ24ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->лБ25ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->лToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->лБ27ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -132,6 +145,13 @@ namespace podolsky {
 			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -140,20 +160,21 @@ namespace podolsky {
 			this->groupBox4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			this->groupBox5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
 			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->лБ22ToolStripMenuItem,
-					this->лБ23ToolStripMenuItem, this->лБ24ToolStripMenuItem
+					this->лБ23ToolStripMenuItem, this->лБ24ToolStripMenuItem, this->лБ25ToolStripMenuItem, this->лToolStripMenuItem, this->лБ27ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Padding = System::Windows::Forms::Padding(6, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(1292, 33);
+			this->menuStrip1->Size = System::Drawing::Size(1871, 33);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -174,6 +195,26 @@ namespace podolsky {
 			this->лБ24ToolStripMenuItem->Name = L"лБ24ToolStripMenuItem";
 			this->лБ24ToolStripMenuItem->Size = System::Drawing::Size(79, 29);
 			this->лБ24ToolStripMenuItem->Text = L"ЛБ 2.4";
+			// 
+			// лБ25ToolStripMenuItem
+			// 
+			this->лБ25ToolStripMenuItem->Name = L"лБ25ToolStripMenuItem";
+			this->лБ25ToolStripMenuItem->Size = System::Drawing::Size(83, 29);
+			this->лБ25ToolStripMenuItem->Text = L"Л.Б 2.5";
+			// 
+			// лToolStripMenuItem
+			// 
+			this->лToolStripMenuItem->Name = L"лToolStripMenuItem";
+			this->лToolStripMenuItem->Size = System::Drawing::Size(83, 29);
+			this->лToolStripMenuItem->Text = L"Л.Б 2.6";
+			this->лToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::лToolStripMenuItem_Click);
+			// 
+			// лБ27ToolStripMenuItem
+			// 
+			this->лБ27ToolStripMenuItem->Name = L"лБ27ToolStripMenuItem";
+			this->лБ27ToolStripMenuItem->Size = System::Drawing::Size(83, 29);
+			this->лБ27ToolStripMenuItem->Text = L"Л.Б 2.7";
+			this->лБ27ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::лБ27ToolStripMenuItem_Click);
 			// 
 			// groupBox1
 			// 
@@ -448,7 +489,7 @@ namespace podolsky {
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(148, 26);
 			this->textBox7->TabIndex = 3;
-			this->textBox7->Text = L"10";
+			this->textBox7->Text = L"6,28";
 			// 
 			// textBox6
 			// 
@@ -457,7 +498,8 @@ namespace podolsky {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(148, 26);
 			this->textBox6->TabIndex = 2;
-			this->textBox6->Text = L"0";
+			this->textBox6->Text = L"-6,28";
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox6_TextChanged);
 			// 
 			// chart2
 			// 
@@ -476,6 +518,7 @@ namespace podolsky {
 			this->chart2->Size = System::Drawing::Size(555, 351);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
+			this->chart2->Click += gcnew System::EventHandler(this, &MyForm::chart2_Click);
 			// 
 			// chart1
 			// 
@@ -499,11 +542,78 @@ namespace podolsky {
 			// 
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
 			// 
+			// groupBox5
+			// 
+			this->groupBox5->Controls->Add(this->button9);
+			this->groupBox5->Controls->Add(this->button8);
+			this->groupBox5->Controls->Add(this->label5);
+			this->groupBox5->Controls->Add(this->textBox9);
+			this->groupBox5->Controls->Add(this->dataGridView2);
+			this->groupBox5->Location = System::Drawing::Point(1163, 50);
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->Size = System::Drawing::Size(422, 231);
+			this->groupBox5->TabIndex = 6;
+			this->groupBox5->TabStop = false;
+			this->groupBox5->Text = L"Случайное блуждание с отражающими экранами";
+			this->groupBox5->Visible = false;
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(278, 136);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(75, 37);
+			this->button9->TabIndex = 4;
+			this->button9->Text = L"Стоп";
+			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(180, 136);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(75, 37);
+			this->button8->TabIndex = 3;
+			this->button8->Text = L"Старт";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(6, 139);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(27, 20);
+			this->label5->TabIndex = 2;
+			this->label5->Text = L"p=";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(42, 136);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(100, 26);
+			this->textBox9->TabIndex = 1;
+			this->textBox9->Text = L"0,4";
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(22, 40);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersWidth = 62;
+			this->dataGridView2->RowTemplate->Height = 28;
+			this->dataGridView2->Size = System::Drawing::Size(382, 79);
+			this->dataGridView2->TabIndex = 0;
+			// 
+			// timer2
+			// 
+			this->timer2->Tick += gcnew System::EventHandler(this, &MyForm::timer2_Tick);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1292, 898);
+			this->ClientSize = System::Drawing::Size(1871, 898);
+			this->Controls->Add(this->groupBox5);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
@@ -526,6 +636,9 @@ namespace podolsky {
 			this->groupBox4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox5->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -669,7 +782,7 @@ namespace podolsky {
 	}
 	private: System::Void groupBox4_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
-		   double x, a;
+		   long double x;
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Построение графика
 		chart1->Series[0]->Points->Clear(); // очистка диаграммы,
@@ -678,6 +791,7 @@ namespace podolsky {
 		a = a.Parse(textBox7->Text);
 		timer1->Enabled = true;
 	}
+		   double a;
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 		if (x <= x.Parse(textBox8->Text)) {// При построении точек аргументы округляем до 3 знаков после запятой.
 			// строим точку (x, f1(x)):
@@ -690,7 +804,77 @@ namespace podolsky {
 		else // x > B,
 			timer1->Enabled = false; // выключили таймер
 	}
-	};
+	private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void лToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+		   int NC;
+	private: System::Void лБ27ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Нажатие на кнопку 2.7
+		groupBox1->Visible = false;
+		groupBox2->Visible = false;
+		groupBox3->Visible = false;
+		groupBox4->Visible = false;
+		groupBox5->Visible = true;
+		// Изменяем свойства dataGridView2:
+		dataGridView2->ColumnCount = 78;
+		dataGridView2->RowCount = 1;
+		// Сокрытие заголовков строк и столбцов:
+		dataGridView2->ColumnHeadersVisible = false; // столбцов,
+		dataGridView2->RowHeadersVisible = false; // строк,
+		// Устанавка ширины столбцов = 7:
+		for (int c = 0; c < dataGridView2->ColumnCount; c++)
+			dataGridView2->Columns[c]->Width = 7;
+		// Начальное положение частицы:
+		NC = dataGridView2->ColumnCount / 2; // координата,
+		dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::Red; // цвет
+		// ячейки.
+		srand(time(0));
+	}
+	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Лабораторная 27
+		timer2->Enabled = true; // включили timer2
+	}
+	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Лабораторная 27 кнопка стоп
+		timer2->Enabled = false; // выключили timer2.
+	}
+	private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) {
+		//Таймер 27 лаба
+		double p = Convert::ToDouble(textBox8->Text); // вероятность смещения влево,
+		double t = (rand() % 100 * 1.0) / 100; // получили очередное случайное число,
+		if (t <= p && NC > 0)
+		{// выпало смещение влево и частица не у левого конца отрезка:
+		// в ячейке, где частица меняем цвет на белый:
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::White;
+			--NC; // смещение влево
+			// в ячейке, в которую сместилась частица меняем цвет на красный:
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::Red;
+		}
+
+		if (t <= p && NC == 0)
+		{// выпало смещение влево и частица у левого конца отрезка:
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::White;
+			++NC; // отражение частицы от левого экрана вправо,
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::Red;
+		}
+		if (t > p && NC < dataGridView2->ColumnCount - 1)
+		{// выпало смещение вправо и частица не у правого конца отрезка:
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::White;
+			++NC; // смещение вправо,
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::Red;
+		}
+		if (t > p && NC == dataGridView2->ColumnCount - 1)
+		{// выпало смещение вправо и частица у правого конца отрезка:
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::White;
+			--NC; // отражение частицы от правого экрана влево.
+			dataGridView2->Rows[0]->Cells[NC]->Style->BackColor = Color::Red;
+		}
+	}
+
+	private: System::Void chart2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 #pragma endregion
 }
 
